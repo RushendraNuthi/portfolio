@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Resume from '/Assets/Rushendra_Nuthi_Resume.pdf';
 
 // SVG Icons
 const EmailIcon = () => (
@@ -92,7 +93,7 @@ const Contact: React.FC = () => {
 
                 <div className="mt-16">
                     <a
-                        href="/components/Assets/Rushendra_Nuthi_Resume.pdf"
+                        href={Resume}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block bg-accent text-background font-bold py-3 px-8 rounded-full hover:bg-accent/90 transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg shadow-accent/20"

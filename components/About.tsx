@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Profile from '/Assets/profile.svg';
 
 const About: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -38,7 +39,7 @@ const About: React.FC = () => {
                     <div className="flex justify-center md:col-span-4">
                         <div className="relative">
                             <img
-                                src="/components/Assets/profile.svg"
+                                src={Profile}
                                 alt="Profile picture of Rushendra Nuthi"
                                 className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-accent/50 shadow-lg shadow-accent/20"
                             />
