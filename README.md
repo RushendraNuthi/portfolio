@@ -58,8 +58,8 @@ A modern, responsive portfolio website showcasing the work and skills of Rushend
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/rushendra-nuthi-portfolio.git
-   cd rushendra-nuthi-portfolio
+   git clone https://github.com/RushendraNuthi/portfolio.git
+   cd portfolio
    ```
 
 2. **Install dependencies**
@@ -141,17 +141,13 @@ The portfolio is fully responsive and optimized for:
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 📞 Contact
 
 **Rushendra Nuthi**
-- Portfolio: [Your Portfolio URL]
-- Email: [Your Email]
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [Your GitHub Profile]
+- Portfolio : [[Live Site (Netlify)](https://rushendranuthi.netlify.app)]
+- Email     : [rushendra.nuthi123@gmail.com](mailto:rushendra.nuthi123@gmail.com)
+- LinkedIn  : [[Rushendra Nuthi](https://linkedin.com/in/rushendranuthi13)]
+- GitHub    : [[Rushendra Nuthi](https://github.com/RushendraNuthi)]
 
 ---
 

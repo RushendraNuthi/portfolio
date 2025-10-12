@@ -92,7 +92,7 @@ const Contact: React.FC = () => {
 
                 <div className="mt-16">
                     <a
-                        href="/Rushendra_Nuthi_Resume.pdf"
+                        href="/Assets/Rushendra_Nuthi_Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block bg-accent text-background font-bold py-3 px-8 rounded-full hover:bg-accent/90 transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg shadow-accent/20"

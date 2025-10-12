@@ -9,7 +9,7 @@ const projectsData = [
             'Dramatically reduced manual analysis and triage time by <strong>60%</strong>, significantly improving the efficiency and accuracy of threat classification.',
             'Implemented solutions using <strong>Large Language Models (LLMs)</strong> and prompt engineering to automatically generate analysis modules and threat reports, boosting the development pace by <strong>40%</strong>.',
         ],
-        link: { url: 'https://github.com/RushendraNuthi/cognito', text: 'View on GitHub' }
+        link: { url: 'https://github.com/RushendraNuthi/Cognito', text: 'View on GitHub' }
     },
     {
         title: 'AIDFAS: Anomaly and Intrusion Detection & Forensic Analysis System',
@@ -31,7 +31,7 @@ const projectsData = [
             'Engineered the tool to extract comprehensive details for each cookie, including host, name, value, creation date, and expiration.',
             'Formatted the extracted, decrypted data into a human-readable text file for straightforward analysis and reporting.',
         ],
-        link: { url: 'https://github.com/RushendraNuthi/Chrome-Cookies-Extractor', text: 'View on GitHub' }
+        link: { url: 'https://github.com/RushendraNuthi/Chrome_Cookies_Extractor', text: 'View on GitHub' }
     },
     {
         title: 'Clickjacking Scanner',
@@ -42,7 +42,7 @@ const projectsData = [
             'Included an option to log the full, verbose response headers, allowing for a more detailed manual analysis of security configurations.',
             'Designed with a simple and intuitive command-line interface for ease of use in automated scripts or manual testing sessions.',
         ],
-        link: { url: 'https://github.com/RushendraNuthi/Clickjacking-Scanner', text: 'View on GitHub' }
+        link: { url: 'https://github.com/RushendraNuthi/Clickjacking_Scanner', text: 'View on GitHub' }
     },
     {
         title: 'Custom Netcat Module',
@@ -53,7 +53,7 @@ const projectsData = [
             'Engineered robust <strong>error handling and graceful shutdown</strong> logic to ensure stable and reliable network connections.',
             'Designed the module to be easily extensible for custom networking tasks and security testing scenarios.',
         ],
-        link: { url: 'https://github.com/RushendraNuthi/Custom-Netcat-Module', text: 'View on GitHub' }
+        link: { url: 'https://github.com/RushendraNuthi/Custom_Netcat_Module', text: 'View on GitHub' }
     },
 ];
 
