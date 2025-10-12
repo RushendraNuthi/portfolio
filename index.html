@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rushendra Nuthi - Portfolio</title>
+    <meta name="description" content="The portfolio of Rushendra Nuthi, a Computer Science student specializing in software development and cybersecurity. Showcasing projects in threat intelligence, anomaly detection, and security tools." />
+    <meta name="keywords" content="Rushendra Nuthi, portfolio, cybersecurity, software developer, full-stack, Python, Flask, threat intelligence, machine learning, security tools, web security" />
+    <meta name="author" content="Rushendra Nuthi" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/tailwind.config.js"></script>
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          scroll-behavior: smooth;
+        }
+      }
+      :root[data-theme='light'] {
+        --color-background: #e6e5e0;
+        --color-background-secondary: #c5dbf0;
+        --color-text-primary: #230462;
+        --color-accent: #203590;
+      }
+      :root[data-theme='dark'] {
+        --color-background: #03071e;
+        --color-background-secondary: #370617;
+        --color-text-primary: #faa307;
+        --color-accent: #ffba08;
+      }
+      body {
+        background-color: var(--color-background);
+        color: var(--color-text-primary);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
