@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Profile from "/Assets/profile.svg";
+import data from "../data/portfolio.json";
 
 const About: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,61 +51,24 @@ const About: React.FC = () => {
           </div>
           <div className="md:col-span-8">
             <h2 className="text-4xl font-bold mb-6">About Me</h2>
-            <p className="text-lg mb-6 leading-relaxed">
-              I am a dedicated and passionate Computer Science professional with
-              a strong foundation in cyber-security, software development, and
-              networking. Currently pursuing my M.Tech in Computer Networks and
-              Information Security, I combine rigorous academic training with a
-              real-world mindset to build secure, efficient, and scalable
-              software systems.
-            </p>
-            <p className="text-lg mb-6 leading-relaxed">
-              Over the years, I’ve cultivated a versatile skill set in software
-              development — proficient in modern web technologies, system
-              design, and security-first practices. I thrive on creating
-              intuitive, high-performance solutions, whether it’s building
-              dynamic web applications or designing robust backend
-              architectures. My interests span across multiple domains, and I am
-              particularly drawn to challenging problems in cybersecurity,
-              network design, and full-stack development.
-            </p>
-            <p className="text-lg mb-6 leading-relaxed">
-              My personal portfolio site reflects not just a collection of
-              projects, but a narrative of growth — showcasing projects that
-              highlight my technical abilities, problem-solving mindset, and
-              commitment to clean, maintainable code. I take pride in writing
-              code that is readable, efficient, and secure, while following
-              industry best practices and standards.
-            </p>
-            <p className="text-lg mb-6 leading-relaxed">
-              As a learner at heart, I am always exploring new tools,
-              frameworks, and methodologies to stay updated with evolving
-              technologies. I believe that continuous learning — coupled with a
-              strong foundation — is key to driving meaningful impact. I welcome
-              collaboration, innovation, and opportunities where I can
-              contribute my skills to real-world challenges and deliver tangible
-              value.
-            </p>
-            <p className="text-lg mb-6 leading-relaxed">
-              In essence, I see myself as a growth-oriented developer and
-              security-conscious engineer who aims to build solutions that are
-              not only functional but also secure, scalable, and maintainable. I
-              am driven by curiosity, guided by discipline, and committed to
-              excellence in every project I undertake.
-            </p>
-            <p className="text-lg mb-6 leading-relaxed">
-              As a learner at heart, I am always exploring new tools,
-              frameworks, and methodologies to stay updated with evolving
-              technologies. I believe that continuous learning — coupled with a
-              strong foundation — is key to driving meaningful impact. I welcome
-              collaboration, innovation, and opportunities where I can
-              contribute my skills to real-world challenges and deliver tangible
-              value. In essence, I see myself as a growth-oriented developer and
-              security-conscious engineer who aims to build solutions that are
-              not only functional but also secure, scalable, and maintainable. I
-              am driven by curiosity, guided by discipline, and committed to
-              excellence in every project I undertake.
-            </p>
+            {data.about.bio.map((paragraph, idx) => (
+              <p key={idx} className="text-lg mb-6 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+            <dl className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {data.about.facts.map((fact) => (
+                <div
+                  key={fact.label}
+                  className="bg-background-secondary/40 border border-accent/20 rounded-lg p-4"
+                >
+                  <dt className="text-sm uppercase tracking-wide text-accent/80">
+                    {fact.label}
+                  </dt>
+                  <dd className="text-base font-semibold mt-1">{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </div>

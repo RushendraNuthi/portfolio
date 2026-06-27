@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import BackgroundAnimation from "./BackgroundAnimation";
+import data from "../data/portfolio.json";
 
 const Hero: React.FC = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -7,7 +8,7 @@ const Hero: React.FC = () => {
   const scrollTicking = useRef(false);
   const mouseMoveTicking = useRef(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const name = "Rushendra Nuthi";
+  const name = data.identity.name;
 
   useEffect(() => {
     // Trigger animation after a short delay to ensure rendering
@@ -101,7 +102,7 @@ const Hero: React.FC = () => {
             willChange: "transform, opacity",
           }}
         >
-          Hello, I'm
+          {data.identity.greeting}
         </p>
         <h1
           className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-accent drop-shadow-lg flex justify-center"
@@ -136,7 +137,7 @@ const Hero: React.FC = () => {
             willChange: "transform, opacity",
           }}
         >
-          Computer Science Student
+          {data.identity.role}
         </p>
       </div>
 

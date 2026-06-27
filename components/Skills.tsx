@@ -1,55 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import data from "../data/portfolio.json";
 
-const skillsData = [
-  {
-    category: "Programming & Development",
-    items: [
-      {
-        title: "Languages",
-        skills: ["Python", "Java", "C", "JavaScript", "SQL", "Bash"],
-      },
-      { title: "Web Technologies", skills: ["HTML/CSS", "Flask", "REST APIs"] },
-      { title: "Version Control", skills: ["Git", "GitHub"] },
-    ],
-  },
-  {
-    category: "Cybersecurity & Analysis",
-    items: [
-      {
-        title: "Domains",
-        skills: [
-          "Threat Detection",
-          "Open-Source Intelligence (OSINT)",
-          "Indicator of Compromise (IOC) Analysis",
-          "Anomaly Detection",
-          "Digital Forensics",
-          "Network & Web Security",
-        ],
-      },
-      {
-        title: "Security Tools",
-        skills: [
-          "Nmap",
-          "Wireshark",
-          "Burp Suite",
-          "Metasploit",
-          "Nessus",
-          "OWASP ZAP",
-        ],
-      },
-    ],
-  },
-  {
-    category: "Tools & Platforms",
-    items: [
-      { title: "Cloud & DevOps", skills: ["Google Cloud Platform"] },
-      {
-        title: "Development Environment",
-        skills: ["VS Code", "GitHub Copilot"],
-      },
-    ],
-  },
-];
+const skillsData = data.skills;
 
 const Skills: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -100,23 +52,14 @@ const Skills: React.FC = () => {
               <h3 className="text-2xl font-bold text-accent mb-4 pb-4 border-b border-accent/20">
                 {categoryGroup.category}
               </h3>
-              <div className="space-y-6 mt-4">
-                {categoryGroup.items.map((item) => (
-                  <div key={item.title}>
-                    <h4 className="font-semibold text-text-primary/90 mb-3">
-                      {item.title}:
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {item.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className="bg-accent/10 text-accent text-sm font-medium px-3 py-1 rounded-full border border-accent/20 hover:bg-accent hover:text-background transition-colors duration-200 cursor-default"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {categoryGroup.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="bg-accent/10 text-accent text-sm font-medium px-3 py-1 rounded-full border border-accent/20 hover:bg-accent hover:text-background transition-colors duration-200 cursor-default"
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>

@@ -1,97 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import data from "../data/portfolio.json";
 
-const projectsData = [
-  {
-    title: "CVScriptly-AI: AI-Powered ATS Resume Builder",
-    description:
-      "A web-based platform designed to streamline and automate the creation of professional, ATS-compliant resumes and CVs. It enables users to generate polished documents in minutes, offering real-time previews and export options in multiple formats (PDF and LaTeX).",
-    contributions: [
-      "Developed a responsive and intuitive front-end using <strong>Next.js and Tailwind CSS</strong>, providing a seamless user experience with real-time editing capabilities.",
-      "Integrated AI-powered features (via <strong>Genkit or equivalent backend service</strong>) to intelligently auto-generate resume content and ensure optimal ATS compatibility, balancing human readability with machine parsing efficiency.",
-      "Implemented robust export functionalities for resumes in <strong>PDF and LaTeX</strong> formats, offering users versatile options tailored to diverse application requirements.",
-      "Established the deployment pipeline and hosting on <strong>Netlify</strong>, ensuring high availability, fast load times, and accessibility of the application.",
-      "<a href='https://cvscriptly-ai.netlify.app/' target='_blank' rel='noopener noreferrer'><strong>Click here for Live Demo</strong></a>",
-    ],
-    link: {
-      url: "https://github.com/RushendraNuthi/CVScriptly-AI",
-      text: "View on GitHub",
-    },
-  },
-  {
-    title: "Cognito: Automated Threat Intelligence Platform",
-    description:
-      "A web-based security tool designed to automate the process of risk assessment for various digital indicators. It centralizes intelligence from multiple industry-standard APIs to provide a quick, consolidated security score.",
-    contributions: [
-      "Engineered a Flask-based application that integrates <strong>VirusTotal, AbuseIPDB, and IPQualityScore APIs</strong> to provide automated risk scoring for URLs, IPs, hashes, and email headers.",
-      "Dramatically reduced manual analysis and triage time by <strong>60%</strong>, significantly improving the efficiency and accuracy of threat classification.",
-      "Implemented solutions using <strong>Large Language Models (LLMs)</strong> and prompt engineering to automatically generate analysis modules and threat reports, boosting the development pace by <strong>40%</strong>.",
-    ],
-    link: {
-      url: "https://github.com/RushendraNuthi/Cognito",
-      text: "View on GitHub",
-    },
-  },
-  {
-    title: "AIDFAS: Anomaly and Intrusion Detection & Forensic Analysis System",
-    description:
-      "A comprehensive security system built to perform real-time threat detection and provide forensic analysis capabilities. It uses machine learning for proactive defense and aggregates data for in-depth investigation.",
-    contributions: [
-      "Implemented a real-time anomaly detection system using the <strong>Isolation Forest</strong> algorithm and a phishing email classifier with <strong>TF-IDF and Logistic Regression</strong>, achieving an accuracy rate of over <strong>92%</strong>.",
-      "Developed and rolled out a user-friendly alert dashboard and forensic timeline using <strong>Flask and Bootstrap 5</strong>, integrating data from <strong>AbuseIPDB and AlienVault OTX APIs</strong>.",
-      "Leveraged <strong>LLMs (Ollama, Kimi-K2)</strong> and AI-powered automation to accelerate the development lifecycle by <strong>60%</strong>.",
-      "Designed and established <strong>RESTful APIs</strong> to aggregate and integrate multi-source forensic data, including logs, network packets, memory dumps, and emails.",
-    ],
-    link: {
-      url: "https://github.com/RushendraNuthi/AIDFAS",
-      text: "View on GitHub",
-    },
-  },
-  {
-    title: "Chrome Cookies Extractor",
-    description:
-      "A Python-based utility for cybersecurity professionals and forensic analysts to extract and decrypt sensitive cookie data from the Google Chrome browser on Windows.",
-    contributions: [
-      "Developed a script in <strong>Python</strong> to locate, extract, and parse the Chrome cookies database file.",
-      "Implemented decryption logic using the <strong>AES</strong> cipher and the <strong>Windows CryptProtectData API</strong> to successfully decrypt protected cookie values.",
-      "Engineered the tool to extract comprehensive details for each cookie, including host, name, value, creation date, and expiration.",
-      "Formatted the extracted, decrypted data into a human-readable text file for straightforward analysis and reporting.",
-    ],
-    link: {
-      url: "https://github.com/RushendraNuthi/Chrome_Cookies_Extractor",
-      text: "View on GitHub",
-    },
-  },
-  {
-    title: "Clickjacking Scanner",
-    description:
-      "A command-line tool designed for developers and security testers to quickly identify potential Clickjacking vulnerabilities in web applications by inspecting HTTP headers.",
-    contributions: [
-      "Created a lightweight and efficient vulnerability scanner using <strong>Python</strong>.",
-      "The tool focuses on detecting the vulnerability by analyzing the <code>X-Frame-Options</code> HTTP response header to check for misconfigurations.",
-      "Included an option to log the full, verbose response headers, allowing for a more detailed manual analysis of security configurations.",
-      "Designed with a simple and intuitive command-line interface for ease of use in automated scripts or manual testing sessions.",
-    ],
-    link: {
-      url: "https://github.com/RushendraNuthi/Clickjacking_Scanner",
-      text: "View on GitHub",
-    },
-  },
-  {
-    title: "Custom Netcat Module",
-    description:
-      "A versatile network utility built in Python that emulates the functionality of Netcat. It provides a flexible tool for network debugging, testing, and remote administration.",
-    contributions: [
-      "Built a dual-mode tool that can operate as both a <strong>TCP client</strong> to connect to remote servers and as a <strong>listening server</strong> to accept incoming connections.",
-      "Integrated advanced functionality for remote access, including <strong>command execution</strong>, <strong>file uploads</strong>, and an interactive command shell.",
-      "Engineered robust <strong>error handling and graceful shutdown</strong> logic to ensure stable and reliable network connections.",
-      "Designed the module to be easily extensible for custom networking tasks and security testing scenarios.",
-    ],
-    link: {
-      url: "https://github.com/RushendraNuthi/Custom_Netcat_Module",
-      text: "View on GitHub",
-    },
-  },
-];
+const projectsData = data.projects;
 
 const ArrowLeft = () => (
   <svg
@@ -274,12 +184,27 @@ const Projects: React.FC = () => {
                   : "opacity-0 -translate-y-4"
               }`}
             >
-              <h3 className="text-3xl font-bold text-accent mb-4">
+              <h3 className="text-3xl font-bold text-accent mb-2">
                 {currentProject.title}
               </h3>
-              <p className="mb-6 leading-relaxed text-text-primary/90">
+              {currentProject.status && (
+                <span className="inline-block mb-4 text-xs font-semibold uppercase tracking-wide text-accent border border-accent/40 rounded-full px-3 py-1">
+                  {currentProject.status}
+                </span>
+              )}
+              <p className="mb-4 leading-relaxed text-text-primary/90">
                 {currentProject.description}
               </p>
+              <div className="flex flex-wrap justify-center gap-2 mb-6">
+                {currentProject.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="bg-accent/10 text-accent text-xs font-medium px-2.5 py-1 rounded-full border border-accent/20"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
               <h4 className="text-xl font-semibold mb-3 text-text-primary">
                 Key Contributions:
               </h4>
@@ -293,18 +218,28 @@ const Projects: React.FC = () => {
                   />
                 ))}
               </ul>
-              {currentProject.link && (
-                <div className="mt-8">
+              <div className="mt-8 flex flex-wrap justify-center gap-4">
+                {currentProject.repo && (
                   <a
-                    href={currentProject.link.url}
+                    href={currentProject.repo}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-accent text-background font-bold py-3 px-8 rounded-full hover:bg-accent/90 transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg shadow-accent/20"
                   >
-                    {currentProject.link.text}
+                    View on GitHub
                   </a>
-                </div>
-              )}
+                )}
+                {currentProject.demo && (
+                  <a
+                    href={currentProject.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block border border-accent text-accent font-bold py-3 px-8 rounded-full hover:bg-accent hover:text-background transition-colors duration-300 ease-in-out"
+                  >
+                    Live Demo
+                  </a>
+                )}
+              </div>
             </div>
           </div>
 

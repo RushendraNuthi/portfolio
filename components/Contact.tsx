@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Resume from '/Assets/Rushendra_Nuthi_Resume.pdf';
+import data from '../data/portfolio.json';
 
 // SVG Icons
 const EmailIcon = () => (
@@ -23,17 +24,17 @@ const GitHubIcon = () => (
 const socialLinks = [
     {
         name: 'Email',
-        href: 'mailto:rushendra.nuthi123@gmail.com',
+        href: `mailto:${data.contact.email}`,
         icon: EmailIcon,
     },
     {
         name: 'LinkedIn',
-        href: 'https://linkedin.com/in/rushendranuthi13',
+        href: data.contact.linkedin,
         icon: LinkedInIcon,
     },
     {
         name: 'GitHub',
-        href: 'https://github.com/RushendraNuthi',
+        href: data.contact.github,
         icon: GitHubIcon,
     },
 ];
@@ -74,7 +75,7 @@ const Contact: React.FC = () => {
             <div className="container mx-auto max-w-6xl text-center">
                 <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
                 <p className="text-lg mb-12 max-w-2xl mx-auto text-text-primary/80">
-                    I'm currently seeking new opportunities and am excited to contribute to innovative projects. Feel free to reach out or view my resume.
+                    {data.contact.message} Feel free to reach out or view my resume.
                 </p>
                 <div className="flex justify-center items-center gap-8 md:gap-12">
                     {socialLinks.map((link) => (

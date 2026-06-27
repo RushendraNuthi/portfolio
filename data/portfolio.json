@@ -1,0 +1,119 @@
+{
+  "identity": {
+    "greeting": "Hello, I'm",
+    "name": "Rushendra Nuthi",
+    "role": "Security-Focused Backend Engineer"
+  },
+  "about": {
+    "bio": [
+      "Security-focused backend engineer and postgraduate student in Computer Networks and Information Security, with experience across Python APIs, security tooling, AI-powered products, and full-stack application development.",
+      "My work includes production-oriented healthcare integrations, threat intelligence automation, local AI interfaces, and credential detection systems. I care about building software that is secure, scalable, and maintainable — and about writing code that is readable and reliable."
+    ],
+    "facts": [
+      { "label": "Current Role", "value": "Software Developer Intern" },
+      { "label": "Education", "value": "M.Tech CNIS / B.Tech Cybersecurity" },
+      { "label": "Security Focus", "value": "Application Security" },
+      { "label": "AI Focus", "value": "Local LLMs & Interfaces" },
+      { "label": "Backend Focus", "value": "Python & FastAPI" }
+    ]
+  },
+  "experience": [
+    {
+      "type": "experience",
+      "title": "Software Developer Intern",
+      "organization": "Kinwits Technologies",
+      "period": "Dec 2024 - Present",
+      "details": "Backend engineering and system integration for AI-enabled healthcare software — building Python/FastAPI services, integration logic, and validation flows across Cerbo EMR and AI-assisted recommendation pipelines."
+    },
+    {
+      "type": "education",
+      "title": "M.Tech in Computer Networks and Information Security",
+      "organization": "JNTUH - University College of Engineering, Science and Technology",
+      "period": "2025 - 2027 (Expected)",
+      "details": "Percentage: 80.25%"
+    },
+    {
+      "type": "education",
+      "title": "B.Tech in Computer Science (Cybersecurity)",
+      "organization": "Guru Nanak Institutions Technical Campus",
+      "period": "2021 - 2025",
+      "details": "GPA 7.72/10.0"
+    }
+  ],
+  "skills": [
+    { "category": "Backend", "skills": ["Python", "FastAPI", "Flask", "REST APIs", "PostgreSQL", "SQLite", "Java"] },
+    { "category": "Security", "skills": ["Credential Detection", "Threat Intelligence Tooling", "Regex Analysis", "Entropy Analysis", "AppSec"] },
+    { "category": "AI / LLM", "skills": ["Ollama", "Claude Workflows", "Genkit", "Prompt Engineering", "RAG Concepts"] },
+    { "category": "Frontend", "skills": ["React", "Next.js", "Tailwind CSS", "TypeScript"] },
+    { "category": "Cloud / DevOps", "skills": ["AWS CloudWatch", "S3", "EC2", "RDS", "Git"] },
+    { "category": "Tools", "skills": ["Docker", "Linux", "VS Code", "Postman", "Nmap"] }
+  ],
+  "certifications": [
+    { "title": "Google Cloud Cybersecurity Certification", "issuer": "Coursera", "date": "2024" },
+    { "title": "Google Cybersecurity Professional Certificate", "issuer": "Coursera", "date": "2023" },
+    { "title": "Introduction to Frontend Development", "issuer": "Great Learning", "date": "2023" },
+    { "title": "Introduction to Cybersecurity", "issuer": "Cisco NetAcad", "date": "2022" }
+  ],
+  "projects": [
+    {
+      "title": "LeakLens",
+      "status": "In Progress",
+      "stack": ["Python", "Machine Learning", "Regex", "Entropy Analysis"],
+      "description": "A local-first credential vulnerability scanner for codebases and repositories. It flags exposed secrets while keeping analysis fully private to the developer's machine.",
+      "contributions": [
+        "Built a layered detection pipeline combining <strong>regex pattern matching, entropy-based checks, and ML-assisted classification</strong> to catch exposed credentials.",
+        "Designed a <strong>local-first architecture</strong> so scanning happens entirely on the developer's machine, preserving privacy.",
+        "Implemented high-randomness (high-entropy) string flagging to surface secrets that signature-only rules miss.",
+        "Focused on <strong>false-positive reduction</strong> to keep results actionable in real development workflows."
+      ],
+      "repo": "https://github.com/RushendraNuthi/LeakLens",
+      "demo": ""
+    },
+    {
+      "title": "CVScriptly-AI: AI-Powered ATS Resume Builder",
+      "status": "Completed",
+      "stack": ["Next.js", "Tailwind CSS", "Genkit", "TypeScript"],
+      "description": "A privacy-first, browser-based AI resume builder with ATS-optimized templates, real-time preview, and multi-format export — generating polished, machine-parseable resumes in minutes.",
+      "contributions": [
+        "Developed a responsive front end using <strong>Next.js and Tailwind CSS</strong> with real-time editing and preview.",
+        "Integrated <strong>AI-powered generation (Genkit)</strong> to auto-draft resume content and ensure strong ATS compatibility.",
+        "Implemented robust export to <strong>PDF and LaTeX</strong>, keeping all processing browser-side for privacy.",
+        "Established the deployment pipeline on <strong>Netlify</strong> for fast, highly-available hosting."
+      ],
+      "repo": "https://github.com/RushendraNuthi/CVScriptly-AI",
+      "demo": "https://cvscriptly-ai.netlify.app/"
+    },
+    {
+      "title": "Cognito: Automated Threat Intelligence Platform",
+      "status": "Completed",
+      "stack": ["Python", "Flask", "Threat Intel APIs", "LLM Integration"],
+      "description": "A Flask-based security tool that automates risk assessment for digital indicators, centralizing intelligence from multiple industry-standard APIs into a single consolidated security score.",
+      "contributions": [
+        "Engineered a Flask application integrating <strong>VirusTotal, AbuseIPDB, and IPQualityScore APIs</strong> for automated risk scoring of URLs, IPs, hashes, and email headers.",
+        "Reduced manual analysis and triage time by <strong>60%</strong>, improving classification efficiency and accuracy.",
+        "Used <strong>LLMs and prompt engineering</strong> to auto-generate analysis modules and threat reports, accelerating development by <strong>40%</strong>."
+      ],
+      "repo": "https://github.com/RushendraNuthi/Cognito",
+      "demo": ""
+    },
+    {
+      "title": "ChayaLM: Local AI Chat Interface",
+      "status": "Completed",
+      "stack": ["React", "TypeScript", "Ollama", "API Integration"],
+      "description": "A local AI chat interface for Ollama-style models that makes private LLM interaction simple and configurable, delivering a cloud-like experience entirely on-device.",
+      "contributions": [
+        "Implemented a UI framework that hooks directly into <strong>local AI runtimes (Ollama)</strong> for fully private inference.",
+        "Delivered a <strong>cloud-like UX</strong> with conversation tracking and configurable model settings.",
+        "Built a minimal, product-grade interface focused on a <strong>privacy-driven architecture</strong>."
+      ],
+      "repo": "https://github.com/RushendraNuthi/ChayaLM",
+      "demo": ""
+    }
+  ],
+  "contact": {
+    "email": "rushendra.nuthi123@gmail.com",
+    "linkedin": "https://linkedin.com/in/rushendranuthi13",
+    "github": "https://github.com/RushendraNuthi",
+    "message": "Available for opportunities, collaborations, and conversations."
+  }
+}
