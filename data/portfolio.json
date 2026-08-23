@@ -10,9 +10,9 @@
       "My work includes production-oriented healthcare integrations, threat intelligence automation, local AI interfaces, and credential detection systems. I care about building software that is secure, scalable, and maintainable — and about writing code that is readable and reliable."
     ],
     "facts": [
-      { "label": "Current Role", "value": "Software Developer Intern" },
+      { "label": "Current Role", "value": "Software Developer" },
       { "label": "Education", "value": "M.Tech CNIS / B.Tech Cybersecurity" },
-      { "label": "Security Focus", "value": "Application Security" },
+      { "label": "Security Focus", "value": "Application Security & Threat Intelligence" },
       { "label": "AI Focus", "value": "Local LLMs & Interfaces" },
       { "label": "Backend Focus", "value": "Python & FastAPI" }
     ]
@@ -20,9 +20,16 @@
   "experience": [
     {
       "type": "experience",
+      "title": "Software Developer",
+      "organization": "Kinwits Technologies",
+      "period": "Aug 2026 - Present",
+      "details": "Promoted from Software Developer Intern. Backend engineering and system integration for AI-enabled healthcare software — Python/FastAPI services, React interfaces, and AWS infrastructure across Cerbo EMR and AI-assisted recommendation pipelines."
+    },
+    {
+      "type": "experience",
       "title": "Software Developer Intern",
       "organization": "Kinwits Technologies",
-      "period": "Dec 2024 - Present",
+      "period": "Dec 2024 - Aug 2026",
       "details": "Backend engineering and system integration for AI-enabled healthcare software — building Python/FastAPI services, integration logic, and validation flows across Cerbo EMR and AI-assisted recommendation pipelines."
     },
     {
@@ -42,22 +49,21 @@
   ],
   "skills": [
     { "category": "Backend", "skills": ["Python", "FastAPI", "Flask", "REST APIs", "PostgreSQL", "SQLite", "Java"] },
-    { "category": "Security", "skills": ["Credential Detection", "Threat Intelligence Tooling", "Regex Analysis", "Entropy Analysis", "AppSec"] },
-    { "category": "AI / LLM", "skills": ["Ollama", "Claude Workflows", "Genkit", "Prompt Engineering", "RAG Concepts"] },
-    { "category": "Frontend", "skills": ["React", "Next.js", "Tailwind CSS", "TypeScript"] },
-    { "category": "Cloud / DevOps", "skills": ["AWS CloudWatch", "S3", "EC2", "RDS", "Git"] },
-    { "category": "Tools", "skills": ["Docker", "Linux", "VS Code", "Postman", "Nmap"] }
+    { "category": "Security", "skills": ["Application Security", "Threat Intelligence Tooling", "Credential Detection", "Nmap", "Wireshark", "Burp Suite", "Metasploit"] },
+    { "category": "AI / LLM", "skills": ["LangChain", "Ollama", "RAG Systems", "Prompt Engineering", "Genkit"] },
+    { "category": "Frontend", "skills": ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+    { "category": "Cloud & DevOps", "skills": ["AWS (EC2, S3, RDS, CloudWatch)", "Docker", "Git", "Google Cloud Platform"] }
   ],
   "certifications": [
-    { "title": "Google Cloud Cybersecurity Certification", "issuer": "Coursera", "date": "2024" },
     { "title": "Google Cybersecurity Professional Certificate", "issuer": "Coursera", "date": "2023" },
-    { "title": "Introduction to Frontend Development", "issuer": "Great Learning", "date": "2023" },
-    { "title": "Introduction to Cybersecurity", "issuer": "Cisco NetAcad", "date": "2022" }
+    { "title": "Google Cloud Cybersecurity Certification", "issuer": "Coursera", "date": "2024" },
+    { "title": "Introduction to Cybersecurity", "issuer": "Cisco NetAcad", "date": "2022" },
+    { "title": "Introduction to Frontend Development", "issuer": "Great Learning", "date": "2023" }
   ],
   "projects": [
     {
       "title": "LeakLens",
-      "status": "In Progress",
+      "status": "Completed",
       "stack": ["Python", "Machine Learning", "Regex", "Entropy Analysis"],
       "description": "A local-first credential vulnerability scanner for codebases and repositories. It flags exposed secrets while keeping analysis fully private to the developer's machine.",
       "contributions": [
@@ -70,9 +76,24 @@
       "demo": ""
     },
     {
+      "title": "ChayaLM: Local AI Chat Interface",
+      "status": "Completed",
+      "stack": ["React", "TypeScript", "FastAPI", "Ollama"],
+      "description": "A full-stack local AI chat application with a React + Vite frontend and FastAPI backend, delivering a private, configurable, cloud-like chat experience for Ollama-hosted models entirely on-device.",
+      "contributions": [
+        "Implemented a UI framework that hooks directly into <strong>local AI runtimes (Ollama)</strong> for fully private inference.",
+        "Built a <strong>FastAPI backend</strong> with JWT auth, SQLite persistence, and streaming responses.",
+        "Delivered a <strong>cloud-like UX</strong> with conversation tracking and configurable model settings.",
+        "Built a minimal, product-grade interface focused on a <strong>privacy-driven architecture</strong>."
+      ],
+      "repo": "https://github.com/RushendraNuthi/ChayaLM",
+      "demo": ""
+    },
+    {
       "title": "CVScriptly-AI: AI-Powered ATS Resume Builder",
       "status": "Completed",
       "stack": ["Next.js", "Tailwind CSS", "Genkit", "TypeScript"],
+      "image": "https://api.microlink.io/?url=https%3A%2F%2Fcvscriptly-ai.netlify.app%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800",
       "description": "A privacy-first, browser-based AI resume builder with ATS-optimized templates, real-time preview, and multi-format export — generating polished, machine-parseable resumes in minutes.",
       "contributions": [
         "Developed a responsive front end using <strong>Next.js and Tailwind CSS</strong> with real-time editing and preview.",
@@ -87,7 +108,7 @@
       "title": "Cognito: Automated Threat Intelligence Platform",
       "status": "Completed",
       "stack": ["Python", "Flask", "Threat Intel APIs", "LLM Integration"],
-      "description": "A Flask-based security tool that automates risk assessment for digital indicators, centralizing intelligence from multiple industry-standard APIs into a single consolidated security score.",
+      "description": "A Flask-based security tool that automates risk assessment for digital indicators, centralizing intelligence from multiple industry-standard APIs into a single consolidated security score — cutting triage time by 60% and speeding up development by 40%.",
       "contributions": [
         "Engineered a Flask application integrating <strong>VirusTotal, AbuseIPDB, and IPQualityScore APIs</strong> for automated risk scoring of URLs, IPs, hashes, and email headers.",
         "Reduced manual analysis and triage time by <strong>60%</strong>, improving classification efficiency and accuracy.",
@@ -97,22 +118,23 @@
       "demo": ""
     },
     {
-      "title": "ChayaLM: Local AI Chat Interface",
+      "title": "AIDFAS: AI-Driven Anomaly Detection & Digital Forensics",
       "status": "Completed",
-      "stack": ["React", "TypeScript", "Ollama", "API Integration"],
-      "description": "A local AI chat interface for Ollama-style models that makes private LLM interaction simple and configurable, delivering a cloud-like experience entirely on-device.",
+      "stack": ["Python", "Flask", "Machine Learning", "Digital Forensics"],
+      "description": "A real-time cybersecurity platform combining machine learning, threat intelligence, and forensic data aggregation to support detection, investigation, and incident analysis, with phishing classification reaching 92%+ reported accuracy.",
       "contributions": [
-        "Implemented a UI framework that hooks directly into <strong>local AI runtimes (Ollama)</strong> for fully private inference.",
-        "Delivered a <strong>cloud-like UX</strong> with conversation tracking and configurable model settings.",
-        "Built a minimal, product-grade interface focused on a <strong>privacy-driven architecture</strong>."
+        "Implemented <strong>Isolation Forest</strong> for anomaly detection and <strong>TF-IDF + Logistic Regression</strong> for phishing classification, achieving <strong>92%+ reported accuracy</strong>.",
+        "Built a live <strong>security alert dashboard and forensic investigation timeline</strong> using Flask and Bootstrap.",
+        "Integrated <strong>AbuseIPDB and AlienVault OTX</strong> for external threat intelligence enrichment.",
+        "Developed REST APIs aggregating forensic artifacts including <strong>logs, network data, memory dumps, and email evidence</strong>."
       ],
-      "repo": "https://github.com/RushendraNuthi/ChayaLM",
+      "repo": "https://github.com/RushendraNuthi/AIDFAS",
       "demo": ""
     }
   ],
   "contact": {
     "email": "rushendra.nuthi123@gmail.com",
-    "linkedin": "https://linkedin.com/in/rushendranuthi13",
+    "linkedin": "https://www.linkedin.com/in/rushendranuthi13",
     "github": "https://github.com/RushendraNuthi",
     "message": "Available for opportunities, collaborations, and conversations."
   }

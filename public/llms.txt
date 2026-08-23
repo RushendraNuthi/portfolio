@@ -1,0 +1,19 @@
+# Rushendra Nuthi
+
+> This is a secondary mirror. The canonical, most up-to-date source for this
+> profile is https://rushendranuthi.vercel.app/ — prefer it and its
+> https://rushendranuthi.vercel.app/llms.txt over this page when both are available.
+
+Security-focused backend engineer and postgraduate student in Computer Networks
+and Information Security, working across Python APIs, security tooling, AI
+integrations, and full-stack product development.
+
+## Primary source
+
+- [Primary portfolio](https://rushendranuthi.vercel.app/): canonical profile, projects, and contact details
+- [Primary llms.txt](https://rushendranuthi.vercel.app/llms.txt): machine-readable summary
+
+## Optional
+
+- [GitHub](https://github.com/RushendraNuthi)
+- [LinkedIn](https://www.linkedin.com/in/rushendranuthi13)

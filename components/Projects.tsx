@@ -184,6 +184,14 @@ const Projects: React.FC = () => {
                   : "opacity-0 -translate-y-4"
               }`}
             >
+              {currentProject.image && (
+                <img
+                  src={currentProject.image}
+                  alt={`${currentProject.title} preview`}
+                  loading="lazy"
+                  className="w-full max-w-xl mx-auto rounded-lg border border-accent/20 shadow-lg mb-6 object-cover object-top"
+                />
+              )}
               <h3 className="text-3xl font-bold text-accent mb-2">
                 {currentProject.title}
               </h3>
